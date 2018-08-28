@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<title>IMC - Cálculo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="frameworks/bootstrap.min.css">
+		<script type="text/javascript" src="frameworks/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="frameworks/jquery.mask.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="frameworks/popper.min.js"></script>
+		<script type="text/javascript" src="frameworks/bootstrap.min.js"></script>
+		<style>
+			button:focus{box-shadow: none !important;}
+			.divB{
+				background-color: #C0C0C0;
+				height: 150px;
+				vertical-align: middle;
+				line-height: 150px;
+				color: #505050	;
+				font-size: 48px;
+				font-weight: bold;
+				display: none;
+			}
+			.warning{
+				display: none;
+				position: absolute;
+				vertical-align: middle;
+				line-height: 30px;
+				padding-left: 3px;
+				width: 50%;
+				height: 30px;
+				background-color: rgba(255, 51, 51, 0.75);
+				margin-top: 20px;
+				margin-left: 10px;
+				border-radius: 2px;
+			}
+			a{
+				cursor: pointer;
+				font-size: 20px;
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div>
+				<h1 class="mt-3" id="teste">Índice de Massa Corporal</h1>
+				<div class="row mt-5">
+					<div class="col-md-6 border-left border-right shadow-lg">
+						<h3 class="text-center"><small>Calcule seu IMC</small></h3>
+						<form>
+							<div class="form-group mt-5">
+								<label for="altura"><h4><small>Altura em metros (ex: 1,70 metros):</small></h4></label>
+								<div class="input-group w-50 mt-3">
+									
+									<input type="text" class="form-control" name="altura" id="altura" placeholder="0,00" />
+									<div class="input-group-append">
+										<span class="input-group-text">Metros</span>
+									</div>
+
+								</div><br><br>
+
+								<label for="peso"><h4><small>Peso em Quilos:</small></h4></label>
+								<div class="input-group w-50 mt-3">
+									
+									<input type="text" class="form-control" name="peso" id="peso" placeholder="000,0" />
+									<div class="input-group-append">
+										<span class="input-group-text">Kg</span>
+									</div>
+
+								</div>
+							</div>
+							<button type="button" class="btn btn-outline-secondary mt-3">Cálcular</button>
+							<div class="warning">
+								<a class="float-right pr-2">&times</a>
+								<strong>Aviso!</strong> Preenchas todos os dados
+							</div>
+						</form><br><br>
+						<div class="w-75 mx-auto bg-secondary text-white text-center shadow-lg">IMC</div>
+						<div class="w-75 mx-auto text-center shadow-lg divB"></div>
+					</div>
+					<div class="col-md-6 border-left border-right shadow-lg">
+						<h3 class="text-center"><small>Resultado</small></h3>
+						<table class="table table-striped mt-5">
+							<thead class="thead-light">
+								<tr class="text-center">
+									<th>Classificação</th>
+									<th>IMC</th>
+									<th>Sintomas</th>
+								</tr>							
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-secondary">Muito abaixo do peso</td>
+									<td>Menor que 17 kg/m2</td>
+									<td class="text-secondary">Queda de cabelo, infertilidade, ausência menstrual</td>
+								</tr>
+								<tr>
+									<td class="text-secondary">Abaixo do peso</td>
+									<td>17 a 18,4 kg/m2</td>
+									<td class="text-secondary">Fadiga, stress, ansiedade</td>
+								</tr>
+								<tr>
+									<td class="text-secondary">Peso normal</td>
+									<td>18,5 a 24,9 kg/m2</td>
+									<td class="text-secondary">Menor risco de doenças cardíacas e vasculares</td>
+								</tr>
+								<tr>
+									<td class="text-secondary">Acima do peso</td>
+									<td>25 a 29,9 kg/m2</td>
+									<td class="text-secondary">Fadiga, má circulação, varizes</td>
+								</tr>
+								<tr>
+									<td class="text-secondary">Obesidade Grau I</td>
+									<td>30 a 34,9 kg/m2</td>
+									<td class="text-secondary">Diabetes, angina, infarto, aterosclerose</td>
+								</tr>
+								<tr>
+									<td class="text-secondary">Obesidade Grau II</td>
+									<td>35 a 40 kg/m2</td>
+									<td class="text-secondary">Apneia do sono, falta de ar</td>
+								</tr>
+								<tr>
+									<td class="text-secondary">Obesidade Grau III</td>
+									<td>Maior que 40 kg/m2</td>
+									<td class="text-secondary">Refluxo, dificuldade para se mover, escaras, diabetes, infarto, AVC</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+		</div>
+	</body>
+</html>
