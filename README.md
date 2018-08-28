@@ -1,1 +1,1 @@
-Uma calculadora simples de IMC!!
+Uma calculadora simples de IMC, com bootstrap e JQuery!!
